@@ -1,0 +1,27 @@
+{
+  "name": "domey",
+  "version": "0.1.0",
+  "description": "A lightweight and simple DOM library that wraps the JavaScript
+   API for manipulating HTML elements.",
+  "main": "main.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jspcrdn/domey"
+  },
+  "homepage": "https://github.com/jspcrdn/domey#readme",
+  "keywords": [
+    "dom",
+    "js",
+    "jquery",
+    "javscript",
+    "html",
+    "library",
+    "element",
+    "events",
+    "domey"
+  ],
+  "author": "jspcrdn",
+  "license": "ISC",
+  "type": "module",
+  "packageManager": "pnpm@10.8.0"
+}
