@@ -81,12 +81,17 @@ class DOM extends IDOM {
   }
 
   clean() {
-    this.#element.innerHTML = '';
+    this.#element.HTML = '';
     return this;
   }
 
   text(txt) {
     this.#element.textContent = txt;
+    return this;
+  }
+
+  val(value) {
+    this.#element.value = value;
     return this;
   }
 
@@ -161,6 +166,21 @@ class DOM extends IDOM {
     return this;
   }
 
+  inner(html) {
+    this.#element.innerHTML = html;
+    return this;
+  }
+
+  outer(html) {
+    this.#element.outerHTML = html;
+    return this;
+  }
+
+  //TODO
+  static on(name, event) {
+    window.addEventListener(name, event);
+  }
+
   get clone() {
     return new DOM(this.#element.cloneNode(true));
   }
@@ -195,6 +215,14 @@ class DOM extends IDOM {
 
   get element() {
     return this.#element;
+  }
+
+  get inner() {
+    return this.#element.innerHTML;
+  }
+
+  get outer() {
+    return this.#element.outerHTML;
   }
 }
 

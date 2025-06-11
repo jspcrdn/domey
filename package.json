@@ -1,14 +1,16 @@
 {
   "name": "domey",
-  "version": "0.1.0",
-  "description": "A lightweight and simple DOM library that wraps the JavaScript
-   API for manipulating HTML elements.",
-  "main": "main.js",
+  "version": "0.1.1",
+  "description": "A lightweight and simple DOM library that wraps the JavaScript API for manipulating HTML elements.",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/jspcrdn/domey"
   },
   "homepage": "https://github.com/jspcrdn/domey#readme",
+  "bugs": {
+    "url": "https://github.com/jspcrdn/domey/issues"
+  },
   "keywords": [
     "dom",
     "js",

@@ -14,7 +14,6 @@ class IDOM {
    * @description
    * - If a string is provided, creates a new element
    * - If a HTML element is provided, uses the exixtent element
-   * @abstract
    */
   constructor(element) {
     if (this.constructor === IDOM) {
@@ -27,7 +26,6 @@ class IDOM {
    *
    * @param {string} id - Element identifier
    * @returns {DOM} DOM instance
-   * @abstract
    */
   static byId(id) {
     _DOMError.methodError(IDOM.byId.name);
@@ -38,7 +36,6 @@ class IDOM {
    *
    * @param {string} classSelector - Class selector
    * @returns {DOM[]} Array of DOM instances
-   * @abstract
    */
   static byClass(classSelector) {
     _DOMError.methodError(IDOM.byClass.name);
@@ -49,7 +46,6 @@ class IDOM {
    *
    * @param {string} query - CSS selector
    * @returns {DOM} DOM instance
-   * @abstract
    */
   static byQuery(query) {
     _DOMError.methodError(IDOM.byQuery.name);
@@ -60,7 +56,6 @@ class IDOM {
    *
    * @param {string} query - CSS selector
    * @returns {DOM[]} Array of DOM instances
-   * @abstract
    */
   static byQueryAll(query) {
     _DOMError.methodError(IDOM.byQueryAll.name);
@@ -72,7 +67,6 @@ class IDOM {
    * @param {string} attribute - Attribute name
    * @param {string} [value] - Attribute value
    * @returns {DOM|string} DOM instance or attribute value
-   * @abstract
    */
   attr(attribute, value) {
     _DOMError.methodError(this.attr.name);
@@ -85,7 +79,6 @@ class IDOM {
    * @param {Function} event - Event management function
    * @param {boolean} [capture=false] - Capture phase
    * @returns {DOM} DOM instance
-   * @abstract
    */
   on(name, event, capture = false) {
     _DOMError.methodError(this.on.name);
@@ -98,7 +91,6 @@ class IDOM {
    * @param {Function} event - Event management function
    * @param {boolean} [capture=false] - Capture phase
    * @returns {DOM} DOM instance
-   * @abstract
    */
   off(name, event, capture = false) {
     _DOMError.methodError(this.off.name);
@@ -109,7 +101,6 @@ class IDOM {
    *
    * @param {DOM|DOM[]} [childElement] - Child element(s) to add
    * @returns {DOM|DOM[]} DOM instane or list of child elements
-   * @abstract
    */
   child(childElement) {
     _DOMError.methodError(this.child.name);
@@ -119,7 +110,6 @@ class IDOM {
    * Cleans the element HTML
    *
    * @returns {DOM} DOM instance
-   * @abstract
    */
   clean() {
     _DOMError.methodError(this.clean.name);
@@ -130,10 +120,19 @@ class IDOM {
    *
    * @param {string} txt Text to add to the element
    * @returns {DOM} DOM instance
-   * @abstract
    */
   text(txt) {
     _DOMError.methodError(this.text.name);
+  }
+
+  /**
+   * Assigns a value to the component
+   *
+   * @param {string} value String with the value of the element
+   * @returns {DOM} DOM instance
+   */
+  val(value) {
+    _DOMError.methodError(this.val.name);
   }
 
   /**
@@ -141,7 +140,6 @@ class IDOM {
    *
    * @param {string} setClass Class string
    * @returns {DOM}
-   * @abstract
    */
   class(setClass) {
     _DOMError.methodError(this.class.name);
@@ -152,7 +150,6 @@ class IDOM {
    *
    * @param {string|Object} style String or object with the style
    * @returns {DOM} DOM instance
-   * @abstract
    */
   style(style) {
     _DOMError.methodError(this.style.name);
@@ -163,7 +160,6 @@ class IDOM {
    *
    * @param {DOM} child Child element to remove
    * @returns {DOM} DOM instance
-   * @abstract
    */
   remove(child) {
     _DOMError.methodError(this.remove.name);
@@ -174,7 +170,6 @@ class IDOM {
    *
    * @param {boolean} isIt Boolean with the visibility state
    * @returns {DOM} DOM instance
-   * @abstract
    */
   visible(isIt) {
     _DOMError.methodError(this.visible.name);
@@ -185,7 +180,6 @@ class IDOM {
    *
    * @param {boolean} isIt Boolean with the display status
    * @returns {DOM} DOM instance
-   * @abstract
    */
   display(isIt) {
     _DOMError.methodError(this.display.name);
@@ -196,7 +190,6 @@ class IDOM {
    *
    * @param {string} width string with the width value
    * @returns {DOM} DOM instance
-   * @abstract
    */
   width() {
     _DOMError.methodError(this.width.name);
@@ -217,7 +210,6 @@ class IDOM {
    *
    * @param {DOM} node DOM instace with the new element node
    * @returns {DOM} DOM Instance
-   * @abstract
    */
   replace() {
     _DOMError.methodError(this.replace.name);
@@ -227,7 +219,6 @@ class IDOM {
    * Cleans the events of an element by replacing it with itself
    *
    * @returns {DOM} DOM Instance
-   * @abstract
    */
   cleanEvents() {
     _DOMError.methodError(this.cleanEvents.name);
@@ -236,7 +227,6 @@ class IDOM {
   /**
    * Destroys the element in the document
    *
-   * @abstract
    */
   destroy() {
     _DOMError.methodError(this.destroy.name);
@@ -248,7 +238,6 @@ class IDOM {
    *
    * @param {Function} fn - the function that will be executed for each record.
    *  (Works the same as JS maps)
-   * @abstract
    */
   map(fn) {
     _DOMError.methodError(this.map.name);
@@ -258,7 +247,6 @@ class IDOM {
    * Disables an element
    *
    * @returns {DOM} DOM Instance
-   * @abstract
    */
   disable() {
     _DOMError.methodError(this.disable.name);
@@ -268,10 +256,29 @@ class IDOM {
    * Enables an element
    *
    * @returns {DOM} DOM Instance
-   * @abstract
    */
   enable() {
     _DOMError.methodError(this.enable.name);
+  }
+
+  /**
+   * Set or change the inner html of the element
+   *
+   * @param {string} html The string with the html to set
+   * @returns {DOM} DOM instance
+   */
+  inner(html) {
+    _DOMError.methodError(this.inner.name);
+  }
+
+  /**
+   * Set or change the outer html of the element
+   *
+   * @param {string} html The string with the html to set
+   * @returns {DOM} DOM instance
+   */
+  outer(html) {
+    _DOMError.methodError(this.outer.name);
   }
 
   // SETTERS AND GETTERS
@@ -280,7 +287,6 @@ class IDOM {
    * Returns a clone of the element
    *
    * @returns {DOM} DOM Instance with the clone
-   * @abstract
    */
   get clone() {
     _DOMError.methodError(this.clone.name);
@@ -290,7 +296,6 @@ class IDOM {
    * Returns the parent of the element
    *
    * @returns {DOM} DOM Instance with the parent
-   * @abstract
    */
   get parent() {
     _DOMError.methodError(this.parent.name);
@@ -300,7 +305,6 @@ class IDOM {
    * Returns the element's value
    *
    * @returns {any} The element's value
-   * @abstract
    */
   get val() {
     _DOMError.methodError(this.val.name);
@@ -310,7 +314,6 @@ class IDOM {
    * Returns the string with the element's tag
    *
    * @returns {string} String with the element's tag
-   * @abstract
    */
   get tag() {
     _DOMError.methodError(this.tag.name);
@@ -319,7 +322,7 @@ class IDOM {
   /**
    * Assigns the width value to the instance element
    *
-   * @abstract
+   * @param {}
    */
   set width(width) {
     _DOMError.methodError(this.width.name);
@@ -329,7 +332,6 @@ class IDOM {
    * Returns the width of the instance element
    *
    * @returns {any} Value with the element's width
-   * @abstract
    */
   get width() {
     _DOMError.methodError(this.width.name);
@@ -338,7 +340,6 @@ class IDOM {
   /**
    * Assigns the height value to the instance element
    *
-   * @abstract
    */
   set height(height) {
     _DOMError.methodError(this.height.name);
@@ -348,7 +349,6 @@ class IDOM {
    * Element height
    *
    * @returns {Number}
-   * @abstract
    */
   get height() {
     _DOMError.methodError(this.height.name);
@@ -358,10 +358,27 @@ class IDOM {
    * Gets the internal DOM element
    *
    * @returns {HTMLElement} DOM Element
-   * @abstract
    */
   get element() {
     _DOMError.methodError(this.element.name);
+  }
+
+  /**
+   * Returns the value of the inner html of the element
+   *
+   * @returns {string} String with the inner HTML of the element
+   */
+  get inner() {
+    _DOMError.methodError(this.inner.name);
+  }
+
+  /**
+   * Returns the value of the outer htmtl of the element
+   *
+   * @returns {string} String with the outer HTML of the element
+   */
+  get outer() {
+    _DOMError.methodError(this.outer.name);
   }
 }
 
