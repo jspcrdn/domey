@@ -1,7 +1,7 @@
 # DOMEY
 
-  **DOMEY** is a lightweight and simple DOM library that wraps the JavaScript
-   API for manipulating HTML elements.
+**DOMEY** is a lightweight and simple DOM library that wraps the JavaScript
+ API for manipulating HTML elements.
 
 ## Usage and installation
 
@@ -17,7 +17,7 @@
 
 - To start using the library these are a couple examples:
 
-  ```JavaScript
+  ```javascript
   // To obtain an element from its id
   const main = $.byId('main');
 
