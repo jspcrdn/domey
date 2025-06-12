@@ -1,6 +1,6 @@
 {
   "name": "domey",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A lightweight and simple DOM library that wraps the JavaScript API for manipulating HTML elements.",
   "main": "index.js",
   "repository": {
