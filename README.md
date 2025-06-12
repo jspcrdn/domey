@@ -12,5 +12,3 @@
 - Now, you can do:
 
   `import $ from 'domey'`
-
-  > Highly recommend to do `globalThis.$ = $` if you want the module to be accessed everywhere in your project
