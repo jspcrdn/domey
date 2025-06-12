@@ -62,6 +62,17 @@ class IDOM {
   }
 
   /**
+   * Adds an vent to the window object
+   *
+   * @param {string} name Name of the event
+   * @param {Function} event Event management function
+   * @returns {Object} Object with the set of functions
+   */
+  static window(name, event) {
+    _DOMError.methodError(IDOM.window.name);
+  }
+
+  /**
    * Handles attribute of the element
    *
    * @param {string} attribute - Attribute name

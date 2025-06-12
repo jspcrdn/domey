@@ -1,7 +1,7 @@
 import { IDOM } from './IDOM.js';
 
 /**
- * DOM class: Utilidad para Manipulación de Elementos del Documento HTML
+ * DOM class: Utility  that wraps JavaScript API to manipulate DOM elemnts
  *
  * @extends {IDOM}
  * @implements {IDOM}
@@ -42,6 +42,12 @@ class DOM extends IDOM {
 
   static byQueryAll(query) {
     return new DOM(document.querySelectorAll(query));
+  }
+
+  static window(name, event) {
+    return {
+      on: window.addEventListener(name, event);
+    };
   }
 
   attr(attribute, value) {
@@ -174,11 +180,6 @@ class DOM extends IDOM {
   outer(html) {
     this.#element.outerHTML = html;
     return this;
-  }
-
-  //TODO
-  static on(name, event) {
-    window.addEventListener(name, event);
   }
 
   get clone() {
