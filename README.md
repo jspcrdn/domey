@@ -14,26 +14,3 @@
   `import $ from 'domey'`
 
   > Highly recommend to do `globalThis.$ = $` if you want the module to be accessed everywhere in your project
-
-- To start using the library these are a couple examples:
-
-  ```javascript
-  // To obtain an element from its id
-  const main = $.byId('main');
-
-  //create a new div
-  const childDiv = new $('div')
-    .attr('id', 'child-div')
-    .child(
-      new $('p')
-        .text('some love!')
-    )
-    .style({
-      'background': 'green',
-    });
-
-  //add a child div to another div
-  main.child(childDiv);
-
-  //
-  ```

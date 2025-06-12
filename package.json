@@ -5,7 +5,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/jspcrdn/domey"
+    "url": "git+https://github.com/jspcrdn/domey.git"
   },
   "homepage": "https://github.com/jspcrdn/domey#readme",
   "bugs": {
