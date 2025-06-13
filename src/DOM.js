@@ -46,7 +46,7 @@ class DOM extends IDOM {
 
   static window(name, event) {
     return {
-      on: window.addEventListener(name, event);
+      on: window.addEventListener(name, event),
     };
   }
 
