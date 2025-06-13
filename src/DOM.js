@@ -44,9 +44,13 @@ class DOM extends IDOM {
     return new DOM(document.querySelectorAll(query));
   }
 
-  static window(name, event) {
+  static get window() {
+    /**
+     * @param {string} name Name of the event
+     * @param {Function} event Event management function
+     */
     return {
-      on: window.addEventListener(name, event),
+      on: (name, event) => window.addEventListener(name, event),
     };
   }
 
@@ -97,7 +101,11 @@ class DOM extends IDOM {
   }
 
   val(value) {
-    this.#element.value = value;
+    if (value) {
+      this.#element.value = value;
+    } else {
+      return this.element.value
+    }
     return this;
   }
 
@@ -188,10 +196,6 @@ class DOM extends IDOM {
 
   get parent() {
     return new DOM(this.#element.parentElement);
-  }
-
-  get val() {
-    return this.#element.value;
   }
 
   get tag() {

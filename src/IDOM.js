@@ -63,12 +63,8 @@ class IDOM {
 
   /**
    * Adds an vent to the window object
-   *
-   * @param {string} name Name of the event
-   * @param {Function} event Event management function
-   * @returns {Object} Object with the set of functions
    */
-  static window(name, event) {
+  static get window() {
     _DOMError.methodError(IDOM.window.name);
   }
 
@@ -310,15 +306,6 @@ class IDOM {
    */
   get parent() {
     _DOMError.methodError(this.parent.name);
-  }
-
-  /**
-   * Returns the element's value
-   *
-   * @returns {any} The element's value
-   */
-  get val() {
-    _DOMError.methodError(this.val.name);
   }
 
   /**
