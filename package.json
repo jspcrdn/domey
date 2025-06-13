@@ -25,6 +25,5 @@
   "author": "jspcrdn",
   "license": "ISC",
   "type": "module",
-  "packageManager": "pnpm@10.8.0",
-  "readme": "README.md"
+  "packageManager": "pnpm@10.8.0"
 }
