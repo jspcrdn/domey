@@ -63,6 +63,8 @@ class IDOM {
 
   /**
    * Adds an vent to the window object
+   *
+   * * @returns {Object} Object with the set of functions
    */
   static get window() {
     _DOMError.methodError(IDOM.window.name);

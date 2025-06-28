@@ -18,22 +18,22 @@ Highly recommend to do `globalThis.$ = $` if you want the module to be accessed 
 To start using the library these are a couple examples:
 
 ```javascript
-// To obtain an element from its id
-const main = $.byId('main');
+$.window.on('load', () => {
+  const main = $.byId('main');
 
-//create a new div
-const childDiv = new $('div')
-  .attr('id', 'child-div')
-  .child(
-    new $('p')
-      .text('some love!')
-  )
-  .style({
-    'background': 'green',
-  });
+  const childDiv = new $('div')
+    .attr('id', 'child-div')
+    .child([
+      new $('p')
+        .text('some love!'),
+      new $('input')
+        .attr('type', 'button')
+        .val('try me!')
+        .on('click', () => alert("Some love for y'all!!")),
+    ]);
 
-//add a child div to another div
-main.child(childDiv);
-
-//
+  main.child(childDiv);
+});
 ```
+
+> Feel free to navigate through the code to fully understand the API, while it's finished in the DOCS.
